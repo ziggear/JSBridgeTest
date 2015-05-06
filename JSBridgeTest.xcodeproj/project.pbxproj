@@ -10,10 +10,11 @@
 		070518511AF9DA7600AB3393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 070518501AF9DA7600AB3393 /* main.m */; };
 		070518541AF9DA7600AB3393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 070518531AF9DA7600AB3393 /* AppDelegate.m */; };
 		070518571AF9DA7600AB3393 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070518561AF9DA7600AB3393 /* ViewController.m */; };
-		0705185A1AF9DA7600AB3393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070518581AF9DA7600AB3393 /* Main.storyboard */; };
 		0705185C1AF9DA7600AB3393 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0705185B1AF9DA7600AB3393 /* Images.xcassets */; };
-		0705185F1AF9DA7600AB3393 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0705185D1AF9DA7600AB3393 /* LaunchScreen.xib */; };
 		0705186B1AF9DA7600AB3393 /* JSBridgeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705186A1AF9DA7600AB3393 /* JSBridgeTestTests.m */; };
+		070518751AF9DC1D00AB3393 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070518741AF9DC1D00AB3393 /* ViewController.xib */; };
+		0705187D1AF9DECE00AB3393 /* shareTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 0705187C1AF9DECE00AB3393 /* shareTest.html */; };
+		0705187F1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +35,13 @@
 		070518531AF9DA7600AB3393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		070518551AF9DA7600AB3393 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		070518561AF9DA7600AB3393 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		070518591AF9DA7600AB3393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0705185B1AF9DA7600AB3393 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0705185E1AF9DA7600AB3393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		070518641AF9DA7600AB3393 /* JSBridgeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSBridgeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070518691AF9DA7600AB3393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0705186A1AF9DA7600AB3393 /* JSBridgeTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBridgeTestTests.m; sourceTree = "<group>"; };
+		070518741AF9DC1D00AB3393 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		0705187C1AF9DECE00AB3393 /* shareTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shareTest.html; sourceTree = "<group>"; };
+		0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SimulatedWeixinJSBridge.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +87,8 @@
 				070518531AF9DA7600AB3393 /* AppDelegate.m */,
 				070518551AF9DA7600AB3393 /* ViewController.h */,
 				070518561AF9DA7600AB3393 /* ViewController.m */,
-				070518581AF9DA7600AB3393 /* Main.storyboard */,
+				070518741AF9DC1D00AB3393 /* ViewController.xib */,
 				0705185B1AF9DA7600AB3393 /* Images.xcassets */,
-				0705185D1AF9DA7600AB3393 /* LaunchScreen.xib */,
 				0705184E1AF9DA7600AB3393 /* Supporting Files */,
 			);
 			path = JSBridgeTest;
@@ -98,6 +99,8 @@
 			children = (
 				0705184F1AF9DA7600AB3393 /* Info.plist */,
 				070518501AF9DA7600AB3393 /* main.m */,
+				0705187C1AF9DECE00AB3393 /* shareTest.html */,
+				0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,9 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0705185A1AF9DA7600AB3393 /* Main.storyboard in Resources */,
-				0705185F1AF9DA7600AB3393 /* LaunchScreen.xib in Resources */,
+				0705187D1AF9DECE00AB3393 /* shareTest.html in Resources */,
+				070518751AF9DC1D00AB3393 /* ViewController.xib in Resources */,
 				0705185C1AF9DA7600AB3393 /* Images.xcassets in Resources */,
+				0705187F1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +246,6 @@
 			targetProxy = 070518651AF9DA7600AB3393 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		070518581AF9DA7600AB3393 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				070518591AF9DA7600AB3393 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0705185D1AF9DA7600AB3393 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0705185E1AF9DA7600AB3393 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0705186C1AF9DA7600AB3393 /* Debug */ = {
@@ -343,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JSBridgeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JSBridgeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

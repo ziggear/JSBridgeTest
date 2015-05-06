@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    ViewController *viewController = [[ViewController alloc] init];
+    
+    //NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"shareTest" ofType:@"html"]];
+    NSURL *url = [NSURL URLWithString:@"http://map.wap.qq.com/app/icarCMS/waptemplate/mapTemp.html?feed_id=909"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    viewController.request = request;
+    
+    self.window.rootViewController = viewController;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
