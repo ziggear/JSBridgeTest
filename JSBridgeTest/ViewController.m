@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "JBWebView.h"
 
 @interface ViewController () <UIWebViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UIWebView *webView;
-@property (nonatomic, strong) IBOutlet UIButton *shareButton;
+@property (nonatomic, strong) IBOutlet JBWebView *webView;
+@property (nonatomic, strong) UIButton *shareButton;
 
 @end
 
@@ -21,8 +22,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.webView.delegate = self;
+    self.title = @"JSBridgeTest";
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(share:)];
+    self.shareButton = (UIButton *)self.navigationItem.rightBarButtonItem.customView;
     self.shareButton.hidden = YES;
+    
+    self.webView.delegate = self;
     [self.webView stringByEvaluatingJavaScriptFromString:@"onload=function(){window.location.href = 'simulatedweixinjsbridge://windowOnLoad/'}"];
 }
 
@@ -43,11 +49,8 @@
 - (void)didFinishLoad
 {
     //do bridge stuff ...
-    if (![[self.webView stringByEvaluatingJavaScriptFromString:@"typeof WeixinJSBridge == 'object'"] isEqualToString:@"true"]) {
-        NSBundle *bundle = [NSBundle mainBundle];
-        NSString *filePath = [bundle pathForResource:@"SimulatedWeixinJSBridge" ofType:@"js"];
-        NSString *js = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        [self.webView stringByEvaluatingJavaScriptFromString:js];
+    if ([self.webView hasObjectForName:@"WeixinJSBridge"] == NO) {
+        [self.webView loadBundleJSByName:@"SimulatedWeixinJSBridge"];
     }
     
     [self.webView stringByEvaluatingJavaScriptFromString:@"WeixinJSBridge.onWebViewReady();"];

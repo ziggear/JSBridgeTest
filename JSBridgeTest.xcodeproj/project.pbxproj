@@ -15,6 +15,7 @@
 		070518751AF9DC1D00AB3393 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070518741AF9DC1D00AB3393 /* ViewController.xib */; };
 		0705187D1AF9DECE00AB3393 /* shareTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 0705187C1AF9DECE00AB3393 /* shareTest.html */; };
 		0705187F1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */; };
+		0705188C1AFB22EB00AB3393 /* JBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705188B1AFB22EB00AB3393 /* JBWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		070518741AF9DC1D00AB3393 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		0705187C1AF9DECE00AB3393 /* shareTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shareTest.html; sourceTree = "<group>"; };
 		0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SimulatedWeixinJSBridge.js; sourceTree = "<group>"; };
+		0705188A1AFB22EB00AB3393 /* JBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWebView.h; sourceTree = "<group>"; };
+		0705188B1AFB22EB00AB3393 /* JBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		0705184D1AF9DA7600AB3393 /* JSBridgeTest */ = {
 			isa = PBXGroup;
 			children = (
+				070518891AFB22DB00AB3393 /* JBWebView */,
 				070518521AF9DA7600AB3393 /* AppDelegate.h */,
 				070518531AF9DA7600AB3393 /* AppDelegate.m */,
 				070518551AF9DA7600AB3393 /* ViewController.h */,
@@ -120,6 +124,15 @@
 				070518691AF9DA7600AB3393 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		070518891AFB22DB00AB3393 /* JBWebView */ = {
+			isa = PBXGroup;
+			children = (
+				0705188A1AFB22EB00AB3393 /* JBWebView.h */,
+				0705188B1AFB22EB00AB3393 /* JBWebView.m */,
+			);
+			path = JBWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +239,7 @@
 				070518571AF9DA7600AB3393 /* ViewController.m in Sources */,
 				070518541AF9DA7600AB3393 /* AppDelegate.m in Sources */,
 				070518511AF9DA7600AB3393 /* main.m in Sources */,
+				0705188C1AFB22EB00AB3393 /* JBWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +413,7 @@
 				070518701AF9DA7600AB3393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		070518711AF9DA7600AB3393 /* Build configuration list for PBXNativeTarget "JSBridgeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +422,7 @@
 				070518731AF9DA7600AB3393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
