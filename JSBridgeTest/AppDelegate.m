@@ -25,7 +25,6 @@
     ViewController *viewController = [[ViewController alloc] init];
     
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"shareTest" ofType:@"html"]];
-    //NSURL *url = [NSURL URLWithString:@"http://map.wap.qq.com/app/icarCMS/waptemplate/mapTemp.html?feed_id=909"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     viewController.request = request;
     

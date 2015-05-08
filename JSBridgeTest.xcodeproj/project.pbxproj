@@ -14,7 +14,6 @@
 		0705186B1AF9DA7600AB3393 /* JSBridgeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705186A1AF9DA7600AB3393 /* JSBridgeTestTests.m */; };
 		070518751AF9DC1D00AB3393 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070518741AF9DC1D00AB3393 /* ViewController.xib */; };
 		0705187D1AF9DECE00AB3393 /* shareTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 0705187C1AF9DECE00AB3393 /* shareTest.html */; };
-		0705187F1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */; };
 		0705188C1AFB22EB00AB3393 /* JBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705188B1AFB22EB00AB3393 /* JBWebView.m */; };
 		07F5F85D1AFC59C50069EE94 /* JBWebObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5F85C1AFC59C50069EE94 /* JBWebObject.m */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		0705186A1AF9DA7600AB3393 /* JSBridgeTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBridgeTestTests.m; sourceTree = "<group>"; };
 		070518741AF9DC1D00AB3393 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		0705187C1AF9DECE00AB3393 /* shareTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shareTest.html; sourceTree = "<group>"; };
-		0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SimulatedWeixinJSBridge.js; sourceTree = "<group>"; };
 		0705188A1AFB22EB00AB3393 /* JBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWebView.h; sourceTree = "<group>"; };
 		0705188B1AFB22EB00AB3393 /* JBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWebView.m; sourceTree = "<group>"; };
 		07F5F85B1AFC59C50069EE94 /* JBWebObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWebObject.h; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				0705184F1AF9DA7600AB3393 /* Info.plist */,
 				070518501AF9DA7600AB3393 /* main.m */,
 				0705187C1AF9DECE00AB3393 /* shareTest.html */,
-				0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,7 +220,6 @@
 				0705187D1AF9DECE00AB3393 /* shareTest.html in Resources */,
 				070518751AF9DC1D00AB3393 /* ViewController.xib in Resources */,
 				0705185C1AF9DA7600AB3393 /* Images.xcassets in Resources */,
-				0705187F1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,22 +3,7 @@
     <div>hello</div>
     
     <script>
-        // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-                                  console.log("onBridgeReady!");
-                                  // 发送给好友
-                                  WeixinJSBridge && WeixinJSBridge.on('menu:share:appmessage', function(argv) {
-                                                                      WeixinJSBridge.invoke('sendAppMessage',{
-                                                                                            "appid": "wx36174d3a5f72f64a",
-                                                                                            "img_url": "1234",
-                                                                                            "img_width": "100",
-                                                                                            "img_height": "100",
-                                                                                            "link": "abcd",
-                                                                                            "title": "defg",
-                                                                                            "desc": "hijk"
-                                                                                            }, function(res) {});
-                                                                      });
-        }, false)
+        // write your test script here 
     </script>
     
 </html>
