@@ -84,7 +84,16 @@
     if([url.host isEqualToString:@"performObjcImp"]) {
         if([params objectForKey:@"obj_name"] && [params objectForKey:@"func_name"]) {
             JBWebObject *wo = [_webObjects objectForKey:[params objectForKey:@"obj_name"]];
-            [wo performJavascriptFunctionName:[params objectForKey:@"func_name"]];
+            if([params objectForKey:@"params"]) {
+                NSString *jsonString = [params objectForKey:@"params"];
+                NSError *error;
+                id responseObject = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:&error];
+                if(!error) {
+                    [wo performJavascriptFunctionName:[params objectForKey:@"func_name"] withObject:responseObject];
+                }
+            } else {
+                [wo performJavascriptFunctionName:[params objectForKey:@"func_name"]];
+            }
         }
     }
 }

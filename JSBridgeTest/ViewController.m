@@ -33,7 +33,7 @@
     [self.webView stringByEvaluatingJavaScriptFromString:@"onload=function(){window.location.href = 'simulatedweixinjsbridge://windowOnLoad/'}"];
     
     JBWebObject *wo = [[JBWebObject alloc] initWithObjectName:@"abc"];
-    [wo appendJavascriptFunctionName:@"hello" handler:^{
+    [wo appendJavascriptFunctionName:@"hello" handler:^(id responseParams){
         NSLog(@"hello i was called by javascript!");
     }];
     
@@ -84,7 +84,7 @@
             }
         } else if ([request.URL.host isEqualToString:@"windowOnLoad"]) {
             NSLog(@"shareTitle: %@", [webView stringByEvaluatingJavaScriptFromString:@"window.shareTitle"]);
-            [self.webView stringByEvaluatingJavaScriptFromString:@"abc.hello();"];
+            [self.webView stringByEvaluatingJavaScriptFromString:@"abc.hello('a', 1, 'bcd');"];
             self.shareButton.hidden = NO;
         }
         return NO;

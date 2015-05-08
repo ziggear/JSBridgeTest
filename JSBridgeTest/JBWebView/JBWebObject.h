@@ -13,8 +13,9 @@
 @property (nonatomic, readonly, strong) NSString *name;
 
 - (id)initWithObjectName:(NSString *)name;
-- (void)appendJavascriptFunctionName:(NSString *)functionName handler:(void (^)())handler;
+- (void)appendJavascriptFunctionName:(NSString *)functionName handler:(void (^)(id responseParams))handler;
 - (void)performJavascriptFunctionName:(NSString *)functionName;
+- (void)performJavascriptFunctionName:(NSString *)functionName withObject:(id)responseObject;
 - (NSString *)javascriptImplementation;
 
 @end
