@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JBWebView.h"
+#import "JBWebObject.h"
 
 @interface ViewController () <UIWebViewDelegate>
 
@@ -30,6 +31,13 @@
     
     self.webView.delegate = self;
     [self.webView stringByEvaluatingJavaScriptFromString:@"onload=function(){window.location.href = 'simulatedweixinjsbridge://windowOnLoad/'}"];
+    
+    JBWebObject *wo = [[JBWebObject alloc] initWithObjectName:@"abc"];
+    [wo appendJavascriptFunctionName:@"hello" handler:^{
+        NSLog(@"hello i was called by javascript!");
+    }];
+    
+    [self.webView appendWebObject:wo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,6 +69,11 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSLog(@"%@", request.URL.scheme);
+    if([self.webView shouldStartLoadWithBridgeRequest:request navigationType:navigationType]) {
+        return NO;
+    }
+    
     if([request.URL.scheme isEqualToString:@"simulatedweixinjsbridge"]) {
         if([request.URL.host isEqualToString:@"sendAppMessage"]) {
             NSString *jsonString = [self.webView stringByEvaluatingJavaScriptFromString:@"WeixinJSBridge.fetchQueue();"];
@@ -71,6 +84,7 @@
             }
         } else if ([request.URL.host isEqualToString:@"windowOnLoad"]) {
             NSLog(@"shareTitle: %@", [webView stringByEvaluatingJavaScriptFromString:@"window.shareTitle"]);
+            [self.webView stringByEvaluatingJavaScriptFromString:@"abc.hello();"];
             self.shareButton.hidden = NO;
         }
         return NO;

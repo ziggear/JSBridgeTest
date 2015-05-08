@@ -7,8 +7,24 @@
 //
 
 #import "JBWebView.h"
+#import "JBWebObject.h"
+
+@interface JBWebView ()
+@property (nonatomic, strong) NSMutableDictionary *webObjects;
+@end
 
 @implementation JBWebView
+
+- (instancetype)init {
+    if(self = [super init]) {
+        _webObjects = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
+
+- (void)awakeFromNib {
+    _webObjects = [NSMutableDictionary dictionary];
+}
 
 - (NSString *)loadBundleJSByName:(NSString *)jsFileName {
     NSBundle *bundle = [NSBundle mainBundle];
@@ -31,5 +47,47 @@
     }
     return nil;
 }
+
+- (void)appendWebObject:(JBWebObject *)wo {
+    if(wo && wo.name) {
+        [_webObjects setObject:wo forKey:wo.name];
+        [self stringByEvaluatingJavaScriptFromString:wo.javascriptImplementation];
+    }
+}
+
+- (BOOL)shouldStartLoadWithBridgeRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if([request.URL.scheme isEqualToString:@"jbwebbridge"]) {
+        [self handleBridgedURL:request.URL];
+        return YES;
+    }
+    return NO;
+}
+
+- (void)handleBridgedURL:(NSURL *)url {
+    NSString *query = url.query;
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    if (query) {
+        NSArray *array = [query componentsSeparatedByString:@"&"];
+        
+        for (NSString *string in array) {
+            NSRange range = [string rangeOfString:@"="];
+            if (range.location != NSNotFound) {
+                NSString *key = [string substringToIndex:range.location];
+                NSString *value = [[string substringFromIndex:range.location + 1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                if (key && value) {
+                    params[key] = value;
+                }
+            }
+        }
+    }
+    
+    if([url.host isEqualToString:@"performObjcImp"]) {
+        if([params objectForKey:@"obj_name"] && [params objectForKey:@"func_name"]) {
+            JBWebObject *wo = [_webObjects objectForKey:[params objectForKey:@"obj_name"]];
+            [wo performJavascriptFunctionName:[params objectForKey:@"func_name"]];
+        }
+    }
+}
+
 
 @end

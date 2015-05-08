@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class JBWebObject;
 @interface JBWebView : UIWebView
 
 - (NSString *)loadBundleJSByName:(NSString *)jsFileName;
 - (BOOL)hasObjectForName:(NSString *)objName;
 - (id)objectForName:(NSString *)objName;
-
+- (void)appendWebObject:(JBWebObject *)wo;
+- (BOOL)shouldStartLoadWithBridgeRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 @end

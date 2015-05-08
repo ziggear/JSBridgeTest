@@ -16,6 +16,7 @@
 		0705187D1AF9DECE00AB3393 /* shareTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 0705187C1AF9DECE00AB3393 /* shareTest.html */; };
 		0705187F1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */; };
 		0705188C1AFB22EB00AB3393 /* JBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705188B1AFB22EB00AB3393 /* JBWebView.m */; };
+		07F5F85D1AFC59C50069EE94 /* JBWebObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5F85C1AFC59C50069EE94 /* JBWebObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		0705187E1AF9F42500AB3393 /* SimulatedWeixinJSBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SimulatedWeixinJSBridge.js; sourceTree = "<group>"; };
 		0705188A1AFB22EB00AB3393 /* JBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWebView.h; sourceTree = "<group>"; };
 		0705188B1AFB22EB00AB3393 /* JBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWebView.m; sourceTree = "<group>"; };
+		07F5F85B1AFC59C50069EE94 /* JBWebObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWebObject.h; sourceTree = "<group>"; };
+		07F5F85C1AFC59C50069EE94 /* JBWebObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWebObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 		070518891AFB22DB00AB3393 /* JBWebView */ = {
 			isa = PBXGroup;
 			children = (
+				07F5F85B1AFC59C50069EE94 /* JBWebObject.h */,
+				07F5F85C1AFC59C50069EE94 /* JBWebObject.m */,
 				0705188A1AFB22EB00AB3393 /* JBWebView.h */,
 				0705188B1AFB22EB00AB3393 /* JBWebView.m */,
 			);
@@ -237,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				070518571AF9DA7600AB3393 /* ViewController.m in Sources */,
+				07F5F85D1AFC59C50069EE94 /* JBWebObject.m in Sources */,
 				070518541AF9DA7600AB3393 /* AppDelegate.m in Sources */,
 				070518511AF9DA7600AB3393 /* main.m in Sources */,
 				0705188C1AFB22EB00AB3393 /* JBWebView.m in Sources */,
